@@ -1,0 +1,10 @@
+---
+- name: Install nginx server 
+  hosts: div-edu-webserver
+  becomes: true
+  tasks:
+    - name: Ensure Nginx is installed or not
+      apt:
+        name: nginx
+        state: present
+    -
