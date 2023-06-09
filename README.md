@@ -24,4 +24,14 @@ The IT tasks, that you control by ansible are   -
   - modules : Modules are the small program to perform specific task
   - notify : its a trigger  to activate the handler task. 
   - handler : its only run if  trigger changed the state mention in notify section
-  
+
+# Provisioning
+  1. Install the ansible only anible controller machine. It may be any ec2 machine in cloud
+  Source :  https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu
+  Command :
+   sudo apt update -y
+   sudo apt install software-properties-common -y
+   sudo add-apt-repository --yes --update ppa:ansible/ansible
+   sudo apt install ansible -y
+  2. run the ssh-keygen in ansible controller , and copy the public key and paste in all slave machine in following location -
+    
